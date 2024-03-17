@@ -23,7 +23,7 @@ class OnboardingViewController: UIViewController {
             if currentPage == slides.count - 1 {
                 nextButton.setTitle("Get Started", for: .normal)
             }else{
-                nextButton.setTitle("Next", for: .normal)
+                nextButton.setTitle(Constant.next, for: .normal)
             }
         }
         
