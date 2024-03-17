@@ -10,5 +10,5 @@ import Foundation
 struct Constant{
     
     static let next = "Next"
-    
+    static let get = "Get Started"
 }

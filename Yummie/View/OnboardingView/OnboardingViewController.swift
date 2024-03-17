@@ -21,7 +21,7 @@ class OnboardingViewController: UIViewController {
         didSet {
             nextPageController.currentPage = currentPage
             if currentPage == slides.count - 1 {
-                nextButton.setTitle("Get Started", for: .normal)
+                nextButton.setTitle(Constant.get, for: .normal)
             }else{
                 nextButton.setTitle(Constant.next, for: .normal)
             }
