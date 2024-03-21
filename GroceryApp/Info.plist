@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NunitoSans_7pt_Condensed-Black.ttf</string>
+	</array>
 </dict>
 </plist>

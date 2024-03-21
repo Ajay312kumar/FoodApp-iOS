@@ -17,6 +17,7 @@
 		B701180C2BA3742A00F7CAF5 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B701180B2BA3742A00F7CAF5 /* OnboardingSlide.swift */; };
 		B701180E2BA37D9300F7CAF5 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B701180D2BA37D9300F7CAF5 /* OnboardingCollectionViewCell.swift */; };
 		B7C49F722BA7281A00DD3A3A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C49F712BA7281A00DD3A3A /* Constant.swift */; };
+		B7F23B922BACA4DF00B7C054 /* Nunito_Sans in Resources */ = {isa = PBXBuildFile; fileRef = B7F23B912BACA4DF00B7C054 /* Nunito_Sans */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B701180B2BA3742A00F7CAF5 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		B701180D2BA37D9300F7CAF5 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7C49F712BA7281A00DD3A3A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B7F23B912BACA4DF00B7C054 /* Nunito_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Nunito_Sans; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		B70117E02BA362BB00F7CAF5 = {
 			isa = PBXGroup;
 			children = (
+				B7F23B902BACA4B700B7C054 /* AppFont */,
 				B7C49F702BA7280700DD3A3A /* Constant */,
 				B70118082BA372D400F7CAF5 /* Extension */,
 				B70118012BA36E2500F7CAF5 /* Yummie */,
@@ -135,6 +138,14 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		B7F23B902BACA4B700B7C054 /* AppFont */ = {
+			isa = PBXGroup;
+			children = (
+				B7F23B912BACA4DF00B7C054 /* Nunito_Sans */,
+			);
+			path = AppFont;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F23B922BACA4DF00B7C054 /* Nunito_Sans in Resources */,
 				B70117F92BA362BC00F7CAF5 /* LaunchScreen.storyboard in Resources */,
 				B70117F62BA362BC00F7CAF5 /* Assets.xcassets in Resources */,
 				B70117F42BA362BB00F7CAF5 /* Main.storyboard in Resources */,

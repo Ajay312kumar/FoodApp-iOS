@@ -36,9 +36,9 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
 
         
-        slides = [OnboardingSlide(title: "Welcome", description: "Welcome to our app!", image: UIImage(named: "Grocery")!),
-                  OnboardingSlide(title: "Welcome", description: "Welcome to our app!", image: UIImage(named: "Grocery")!),
-                  OnboardingSlide(title: "Welcome", description: "Welcome to our app!", image: UIImage(named: "Grocery")!)
+        slides = [OnboardingSlide(title: "Welcome", description: "Welcome to our app!", image: UIImage(named: "slide1")!),
+                  OnboardingSlide(title: "Welcome", description: "Welcome to our app!", image: UIImage(named: "slide2")!),
+                  OnboardingSlide(title: "Welcome", description: "Welcome to our app!", image: UIImage(named: "slide3")!)
         ]
 
         
@@ -61,7 +61,11 @@ class OnboardingViewController: UIViewController {
     @IBAction func nextButtonAction(_ sender: UIButton) {
         
         if currentPage == slides.count - 1 {
-            print("Go to the next page")
+            if let navigationController = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as? UINavigationController {
+                navigationController.modalTransitionStyle = .flipHorizontal
+                navigationController.modalPresentationStyle = .fullScreen
+                present(navigationController, animated: true, completion: nil)
+            }
         }else{
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)

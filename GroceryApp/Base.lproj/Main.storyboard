@@ -8,6 +8,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf">
+            <string>NunitoSans-12ptExtraLight_Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,9 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-6K-9iF">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-6K-9iF">
                                 <rect key="frame" x="0.0" y="59" width="393" height="571.33333333333337"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="571.33000000000004" id="QAl-fp-ejv"/>
+                                    <constraint firstAttribute="width" constant="393" id="orG-Xz-jzt"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vxp-la-0mG">
                                     <size key="itemSize" width="391" height="569.33333333333337"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,48 +38,38 @@
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="adt-kh-eGd" customClass="OnboardingCollectionViewCell" customModule="GroceryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="391" height="569.33333333333337"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="45D-pl-yAc">
                                             <rect key="frame" x="0.0" y="0.0" width="391" height="569.33333333333337"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcU-vs-ttr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="391" height="392"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="391" id="c3U-i7-cwq"/>
-                                                        <constraint firstAttribute="height" constant="392" id="i7N-I7-UV4"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Delivery and online reservation system for restuarant and cafes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIC-lb-LZ8">
-                                                    <rect key="frame" x="8" y="400" width="375" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="375" id="li9-uL-zuD"/>
-                                                        <constraint firstAttribute="height" constant="50" id="zUx-Zn-eIW"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUF-GM-B0M">
+                                                    <rect key="frame" x="0.0" y="0.0" width="391" height="384"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcU-vs-ttr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="391" height="384"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Delivery and online reservation system for restuarant and cafes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIC-lb-LZ8">
+                                                    <rect key="frame" x="8" y="392" width="375" height="23.333333333333314"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="NunitoSans-12ptExtraLight_Regular" family="Nunito Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Delivery at your Door" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91V-Jx-6Lg">
-                                                    <rect key="frame" x="8" y="458" width="375" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quick Delivery at your Door" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91V-Jx-6Lg">
+                                                    <rect key="frame" x="16" y="450" width="375" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="91V-Jx-6Lg" firstAttribute="top" secondItem="nIC-lb-LZ8" secondAttribute="bottom" constant="8" symbolic="YES" id="7oI-gv-GN7"/>
-                                                <constraint firstItem="fcU-vs-ttr" firstAttribute="top" secondItem="45D-pl-yAc" secondAttribute="top" id="FyI-up-zZ9"/>
-                                                <constraint firstItem="91V-Jx-6Lg" firstAttribute="leading" secondItem="nIC-lb-LZ8" secondAttribute="leading" id="P8X-Qf-Luw"/>
-                                                <constraint firstAttribute="trailing" secondItem="fcU-vs-ttr" secondAttribute="trailing" id="PIG-Pb-kuh"/>
-                                                <constraint firstItem="fcU-vs-ttr" firstAttribute="leading" secondItem="45D-pl-yAc" secondAttribute="leading" id="SGI-9U-ovs"/>
-                                                <constraint firstItem="nIC-lb-LZ8" firstAttribute="leading" secondItem="45D-pl-yAc" secondAttribute="leading" constant="8" id="dKt-4k-5J9"/>
-                                                <constraint firstItem="nIC-lb-LZ8" firstAttribute="top" secondItem="fcU-vs-ttr" secondAttribute="bottom" constant="8" symbolic="YES" id="iaS-Kk-vpG"/>
-                                                <constraint firstItem="nIC-lb-LZ8" firstAttribute="centerX" secondItem="45D-pl-yAc" secondAttribute="centerX" id="j8T-fa-zKa"/>
-                                                <constraint firstItem="91V-Jx-6Lg" firstAttribute="trailing" secondItem="nIC-lb-LZ8" secondAttribute="trailing" id="xc8-Lc-QdU"/>
-                                                <constraint firstAttribute="trailing" secondItem="nIC-lb-LZ8" secondAttribute="trailing" constant="8" id="xyu-Cs-7EM"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <size key="customSize" width="391" height="569.33333333333337"/>
@@ -99,7 +98,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7oJ-jV-1Je">
-                                <rect key="frame" x="138.66666666666666" y="700.33333333333337" width="115.66666666666666" height="25.666666666666629"/>
+                                <rect key="frame" x="138.66666666666666" y="630.33333333333337" width="115.66666666666666" height="95.666666666666629"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,7 +108,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7oJ-jV-1Je" firstAttribute="top" secondItem="LaR-6K-9iF" secondAttribute="bottom" constant="70" id="BZg-Q5-2fY"/>
+                            <constraint firstItem="7oJ-jV-1Je" firstAttribute="top" secondItem="LaR-6K-9iF" secondAttribute="bottom" id="BZg-Q5-2fY"/>
                             <constraint firstItem="LaR-6K-9iF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CdM-Xm-vRb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IxO-vh-tNK" secondAttribute="bottom" constant="36" id="GMO-px-tJh"/>
                             <constraint firstItem="LaR-6K-9iF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MpV-z7-uVc"/>
@@ -128,6 +127,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-208.3969465648855" y="-60.563380281690144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="etu-vu-qkX">
+            <objects>
+                <viewController id="75f-LK-fje" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFd-TO-yuI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eAa-Qi-UAe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SyX-nS-ddQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhV-zv-bf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547" y="-47"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="db8-2G-ff2">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" id="SQZ-bH-6Mj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0S0-cl-Qjq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="75f-LK-fje" kind="relationship" relationship="rootViewController" id="XRk-zS-ZmD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9l-aO-ME5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855.72519083969462" y="-47.183098591549296"/>
         </scene>
     </scenes>
     <resources>
