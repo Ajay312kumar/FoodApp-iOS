@@ -53,13 +53,6 @@ class OnboardingViewController: UIViewController {
             layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             layout.itemSize = CGSize(width: 393, height: 700)
         }
-//        if let layout = onBoardingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-//            layout.scrollDirection = .horizontal
-//            layout.minimumLineSpacing = 10
-//            layout.minimumInteritemSpacing = 0
-//            layout.sectionInset = UIEdgeInsets(top: 0, left: 00, bottom: 0, right: 0)
-//         //   layout.itemSize = CGSize(width: photoCollectionView.frame.size.width / 3 + 10, height: photoCollectionView.frame.size.height)
-//        }
         
     }
     
